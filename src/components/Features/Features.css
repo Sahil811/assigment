@@ -1,0 +1,148 @@
+.feature__info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.feature__info > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.badge {
+  background: #9b93f3;
+  background: -webkit-linear-gradient(to left, #9b93f3, #7468f0);
+  background: linear-gradient(to left, #9b93f3, #7468f0);
+  color: white;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  flex: 1;
+  transition: all 150ms ease-in;
+}
+
+.badge:hover {
+  transform: scale(1.02);
+}
+
+.badge > div {
+  position: relative;
+}
+
+.badge > div > h2 {
+  margin-top: 7rem;
+}
+
+.graph {
+  flex: 1;
+}
+
+.graph > div {
+  flex: 1;
+}
+
+.symbol {
+  background-color: #7468f0;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.metaBadge {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sub__feature {
+  display: flex;
+  flex-direction: column !important;
+  background: white;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+
+.sub__feature-info {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.1rem rgb(235, 240, 249) solid;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sub__feature-info > div {
+  flex: 1;
+}
+
+.view-details {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.view-details > h3 {
+  position: absolute;
+  top: 5.5rem;
+}
+
+.view-details > h3 > span {
+  color: #4ccf86;
+}
+
+.view-details > p {
+  position: absolute;
+  color: #ababab;
+  font-size: 1.5rem;
+  top: 3rem;
+}
+
+.view-details > button {
+  background: #7468f0;
+  color: white;
+  font-size: 1.6rem;
+  text-transform: inherit;
+  margin-top: 10rem;
+  position: relative;
+}
+
+.right-arrow {
+  position: absolute;
+  left: 21.5rem;
+}
+
+.view-details > button:hover {
+  color: #7468f0;
+}
+
+.view-details-2 {
+  position: relative;
+}
+
+.week__info {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  font-size: 1.2rem;
+}
+
+.view-details-3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.view-details-3 > div {
+  flex: 1;
+  min-width: 50%;
+}

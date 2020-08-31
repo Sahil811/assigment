@@ -1,0 +1,40 @@
+.menu {
+  font-size: 1.2rem;
+  background: white;
+  border-radius: 1rem;
+}
+
+.menu__info {
+  height: 5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.menu__info > div {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.menu__info > button {
+  font-size: 1.2rem;
+  text-transform: inherit;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  background: #8075f0;
+  color: white;
+  padding: 0.5rem 2rem;
+}
+
+.menu__info > button:hover {
+  color: #8075f0;
+  background: white;
+}
+
+.menu__info > div > div {
+  margin: 0 0.5rem;
+}

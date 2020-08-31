@@ -1,0 +1,40 @@
+.header {
+  width: 100%;
+}
+
+.header__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.header__info > div {
+  display: flex;
+  align-items: center;
+}
+
+.header__info > div > div {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  color: orange;
+  font-size: large !important;
+}
+
+.logo {
+  width: 5rem;
+  height: 4rem;
+}
+
+.languageContainer > div {
+  margin-bottom: 0.3rem;
+}
+
+.language {
+  width: 2rem;
+  margin-right: 1rem;
+}
