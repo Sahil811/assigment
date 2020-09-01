@@ -5,12 +5,12 @@ import DashBoard from "./containers/DashBoard";
 import LoginPage from "./containers/LoginPage";
 import SignupPage from "./containers/SignupPage";
 import ResetPasswordPage from "./containers/ResetPasswordPage";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <div className="App">
           <Switch>
             <Route path="/signup" component={SignupPage}></Route>
@@ -19,7 +19,7 @@ function App() {
             <Route path="/" component={LoginPage}></Route>
           </Switch>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   );
 }
