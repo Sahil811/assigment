@@ -1,6 +1,6 @@
 import React from "react";
 import "./chart.css";
-import { Bar, Line, Pie } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 class BarChart extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class BarChart extends React.Component {
         datasets: [
           {
             data: [2, 4, 7, 5, 4, 2, 1],
-            backgroundColor: [, , "rgb(116, 104, 240)"],
+            backgroundColor: ["#E5E5E5", "#E5E5E5", "rgb(116, 104, 240)"],
             cornerRadius: 20,
             fill: false,
             pointRadius: 0,

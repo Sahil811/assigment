@@ -1,19 +1,19 @@
 import React from "react";
 import "./chart.css";
-import { Line } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
-class LineChart1 extends React.Component {
+class PieChart extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       ChartData: {
-        labels: ["a", "b", "c", "d", "e", "f", "g"],
+        labels: ["Completed Tickets"],
         datasets: [
           {
             label: "Subscriber Gained",
-            data: [1, 4, 3, 6, 5, 9, 6, 7],
-            borderColor: "rgb(116, 104, 240)",
+            data: [83, 17],
+            borderColor: ["#7666EC", "#E75458"],
             fill: false,
             pointRadius: 0,
             xAxisID: false,
@@ -27,14 +27,14 @@ class LineChart1 extends React.Component {
   render() {
     return (
       <div className="LineChart1">
-        <Line
+        <Pie
           data={this.state.ChartData}
           width={100}
           height={50}
           options={{
             title: {
               display: true,
-              text: "92.6k",
+              text: "83%",
               fontSize: 25,
             },
             legend: {
@@ -70,4 +70,4 @@ class LineChart1 extends React.Component {
   }
 }
 
-export default LineChart1;
+export default PieChart;

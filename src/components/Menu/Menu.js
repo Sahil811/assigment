@@ -9,49 +9,63 @@ import EqualizerOutlinedIcon from "@material-ui/icons/EqualizerOutlined";
 import RadioButtonUncheckedOutlinedIcon from "@material-ui/icons/RadioButtonUncheckedOutlined";
 import AppsIcon from "@material-ui/icons/Apps";
 import { Button } from "@material-ui/core";
+import { connect } from "react-redux";
+import { logout } from "../../actions/auth";
 
-const Menu = () => {
-  return (
-    <menu className="menu">
-      <div className="menu__info">
-        <Button className="dashboard">
-          <HomeOutlinedIcon />
-          <div>Dashboard</div>
-          <ExpandMoreOutlinedIcon />
-        </Button>
-        <div>
-          <AppsIcon />
-          <div>Apps</div>
-          <ExpandMoreOutlinedIcon />
-        </div>
-        <div>
-          <LayersOutlinedIcon />
-          <div>UI Elements</div>
-          <ExpandMoreOutlinedIcon />
-        </div>
-        <div>
-          <CreateOutlinedIcon />
-          <div>Form & Tables</div>
-          <ExpandMoreOutlinedIcon />
-        </div>
-        <div>
-          <FileCopyOutlinedIcon />
-          <div>Pages</div>
-          <ExpandMoreOutlinedIcon />
-        </div>
-        <div>
-          <EqualizerOutlinedIcon />
-          <div>Charts & Maps</div>
-          <ExpandMoreOutlinedIcon />
-        </div>
-        <div>
-          <RadioButtonUncheckedOutlinedIcon />
-          <div>Others</div>
-          <ExpandMoreOutlinedIcon />
-        </div>
-      </div>
-    </menu>
-  );
-};
+class Menu extends React.Component {
+  render() {
+    let menu = (
+      <menu className="menu">
+        <div className="menu__info">
+          <Button className="dashboard">
+            <HomeOutlinedIcon />
+            <div>Dashboard</div>
+            <ExpandMoreOutlinedIcon />
+          </Button>
+          <div>
+            <AppsIcon />
+            <div>Apps</div>
+            <ExpandMoreOutlinedIcon />
+          </div>
+          <div>
+            <LayersOutlinedIcon />
+            <div>UI Elements</div>
+            <ExpandMoreOutlinedIcon />
+          </div>
+          <div>
+            <CreateOutlinedIcon />
+            <div>Form & Tables</div>
+            <ExpandMoreOutlinedIcon />
+          </div>
+          <div className="logout">
+            <Button>
+              <FileCopyOutlinedIcon />
+              <div>Pages</div>
+              <ExpandMoreOutlinedIcon />
+            </Button>
+            <ul>
+              <li onClick={() => this.props.logout()}>
+                <Button>Logout</Button>
+              </li>
+            </ul>
+          </div>
 
-export default Menu;
+          <div>
+            <EqualizerOutlinedIcon />
+            <div>Charts & Maps</div>
+            <ExpandMoreOutlinedIcon />
+          </div>
+          <div>
+            <RadioButtonUncheckedOutlinedIcon />
+            <div>Others</div>
+            <ExpandMoreOutlinedIcon />
+          </div>
+        </div>
+      </menu>
+    );
+
+    return <div>{menu}</div>;
+  }
+}
+
+export default connect(null, { logout })(Menu);
