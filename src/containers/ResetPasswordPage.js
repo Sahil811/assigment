@@ -5,11 +5,11 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { auth, clearError } from "../actions/auth";
+import { resetPassword, clearError } from "../actions/auth";
 import Modal from "react-modal";
 import Loader from "../components/Loader/Loader";
 
-class SignupPage extends React.Component {
+class ResetPasswordPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,7 +41,7 @@ class SignupPage extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.auth(this.state);
+    this.props.resetPassword(this.state);
   }
 
   render() {
@@ -115,7 +115,7 @@ class SignupPage extends React.Component {
             </div>
 
             <div className="input-container change">
-              <label className="label">Password: </label>
+              <label className="label">New Password: </label>
               <input
                 type="password"
                 name="password"
@@ -138,13 +138,13 @@ class SignupPage extends React.Component {
               />
             </div>
             <button type="submit" id="login-btn">
-              Sign up
+              Reset Password
             </button>
           </form>
           <p className="signup-label">
-            Already Have an account?{" "}
-            <Link to="/" className="link">
-              Sign in
+            Don't Have an account?
+            <Link to="/signup" className="link">
+              Sign up
             </Link>
           </p>
         </React.Fragment>
@@ -177,4 +177,6 @@ const mapStateToProps = (state) => ({
   error: state.user.error,
 });
 
-export default connect(mapStateToProps, { auth, clearError })(SignupPage);
+export default connect(mapStateToProps, { resetPassword, clearError })(
+  ResetPasswordPage
+);
