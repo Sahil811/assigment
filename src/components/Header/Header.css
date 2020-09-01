@@ -27,6 +27,7 @@
 
 .logo {
   width: 5rem;
+  margin-left: 10rem;
   height: 4rem;
 }
 
@@ -37,4 +38,8 @@
 .language {
   width: 2rem;
   margin-right: 1rem;
+}
+
+.status {
+  font-size: 1rem;
 }

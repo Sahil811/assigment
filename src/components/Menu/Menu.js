@@ -40,7 +40,7 @@ class Menu extends React.Component {
           <div className="logout">
             <Button>
               <FileCopyOutlinedIcon />
-              <div>Pages</div>
+              <div className="pages">Pages</div>
               <ExpandMoreOutlinedIcon />
             </Button>
             <ul>

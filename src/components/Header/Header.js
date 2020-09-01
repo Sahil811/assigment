@@ -65,9 +65,9 @@ class Header extends React.Component {
             </div>
 
             <div>
-              <div>
+              <div className="user">
                 <div>{this.props.user}</div>
-                <div>Available</div>
+                <div className="status">Available</div>
               </div>
 
               <div>
